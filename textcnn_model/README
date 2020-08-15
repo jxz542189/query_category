@@ -1,0 +1,18 @@
+# 602, 604, 605, 609 embedding_size=128 learning_rate=1e-3
+model = TextCNN(sequence_length=10,
+              num_classes=len(label2id),
+              vocab_size=83144,
+              embedding_size=128,
+              filter_sizes=list(map(int, "3,4,5".split(","))),
+              num_filters=128,
+              l2_reg_lambda=0.1)
+              
+# 其他embedding_size=64 learning_rate=1e-2
+model = TextCNN(sequence_length=10,
+              num_classes=len(label2id),
+              vocab_size=83144,
+              embedding_size=64,
+              filter_sizes=list(map(int, "3,4,5".split(","))),
+              num_filters=128,
+              l2_reg_lambda=0.1)
+
