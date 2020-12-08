@@ -16,6 +16,7 @@ with gfile.FastGFile(model_file, 'rb') as f:
 
 
 input_x = sess.graph.get_operation_by_name("input_x").outputs[0]
+
 dropout_keep_prob = sess.graph.get_operation_by_name("dropout_keep_prob").outputs[0]
 predictions = sess.graph.get_operation_by_name("output/predictions").outputs[0]
 ret = sess.run(predictions, feed_dict={input_x: [[1, 1, 1,1, 1,1, 1,1 ,1, 1,1, 1, 1, 1, 1]], dropout_keep_prob: 1.0})
