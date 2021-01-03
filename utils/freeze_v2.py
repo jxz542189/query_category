@@ -36,7 +36,6 @@ def freeze_graph(input_checkpoint, output_graph):
         print("%d ops in the final graph." %
               len(output_graph_def.node))
 
-###
 
 def load_pb(file):
     with tf.Session() as sess:
